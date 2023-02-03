@@ -52,8 +52,6 @@ def update_movie(id:int,movie:Movie):
     MovieService(db).update_movie(id,movie)
     return JSONResponse(content={"message":"Se ha modificado la pelicula con id: {id}"})
 
-   
-
 @movie_router.delete('/movies/{id}',tags=['movies'])
 def delete_movie(id:int):
         db = Session()
